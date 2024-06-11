@@ -759,7 +759,7 @@ if __name__ == '__main__':
     #                            dicts=dicts,
     #                            tokenizer=tokenizer)
     # sample = context_data[0]
-    tokenizer = BertTokenizer.from_pretrained('./bert-large-cased',
+    tokenizer = BertTokenizer.from_pretrained('bert-large-cased',
                                               do_lower_cased=False)
     dicts = load_dict(root_path='./dicts/genia')
     context_data = ContextData(json_path='./data/genia/context_test.json',
