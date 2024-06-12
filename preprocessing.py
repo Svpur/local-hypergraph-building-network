@@ -330,83 +330,83 @@ def convert_glove():
 
 
 if __name__ == '__main__':
-    # convert_glove()
-    # tokenizer = BertTokenizer.from_pretrained('./biobert-large-cased-v1.1-squad',
-    #                                           do_lower_case=False)
-    # add_special_token(special_token_list=['<ENT>', '</ENT>'],
-    #                   bert_path='./biobert-large-cased-v1.1-squad')
-    #
-    # train_dev_path = './data/original/genia/genia_train_dev_context.json'
-    # test_path = './data/original/genia/genia_test_context.json'
-    # paths = [train_dev_path,
-    #          test_path]
-    # save_paths = ['./data/genia/train.json',
-    #               './data/genia/test.json']
-    # for path, save_path in zip(paths, save_paths):
-    #     convert_sentence_data(path, tokenizer, save_path)
-    #     convert_context_data(path, tokenizer, save_path)
-    #     convert_bio_passage_data(path, tokenizer, save_path)
+    convert_glove()
+    tokenizer = BertTokenizer.from_pretrained('./biobert-large-cased-v1.1-squad',
+                                              do_lower_case=False)
+    add_special_token(special_token_list=['<ENT>', '</ENT>'],
+                      bert_path='./biobert-large-cased-v1.1-squad')
+    
+    train_dev_path = './data/original/genia/genia_train_dev_context.json'
+    test_path = './data/original/genia/genia_test_context.json'
+    paths = [train_dev_path,
+             test_path]
+    save_paths = ['./data/genia/train.json',
+                  './data/genia/test.json']
+    for path, save_path in zip(paths, save_paths):
+        convert_sentence_data(path, tokenizer, save_path)
+        convert_context_data(path, tokenizer, save_path)
+        convert_bio_passage_data(path, tokenizer, save_path)
 
-    # tokenizer = BertTokenizer.from_pretrained('./bert-large-cased',
-    #                                           do_lower_case=False)
-    # add_special_token(special_token_list=['<ENT>', '</ENT>'],
-    #                   bert_path='./bert-large-cased')
-    # train_path = './data/original/ace04/ace04_train_context.json'
-    # dev_path = './data/original/ace04/ace04_dev_context.json'
-    # test_path = './data/original/ace04/ace04_test_context.json'
-    # paths = [train_path,
-    #          dev_path,
-    #          test_path]
-    # confirm_directory('./data/ace04')
-    # save_paths = ['./data/ace04/train.json',
-    #               './data/ace04/dev.json',
-    #               './data/ace04/test.json']
-    #
-    # for path, save_path in zip(paths, save_paths):
-    #     convert_context_data(path, tokenizer, save_path)
-    # get_vec_dicts(directory='./data/ace04',
-    #               prex='ace04')
-    #
-    # tokenizer = BertTokenizer.from_pretrained('./bert-large-cased',
-    #                                           do_lower_case=False)
-    # add_special_token(special_token_list=['<ENT>', '</ENT>'],
-    #                   bert_path='./bert-large-cased')
-    #
-    # train_path = './data/original/ace05/ace05_train_context.json'
-    # dev_path = './data/original/ace05/ace05_dev_context.json'
-    # test_path = './data/original/ace05/ace05_test_context.json'
-    # paths = [train_path,
-    #          dev_path,
-    #          test_path]
-    # confirm_directory('./data/ace05')
-    # save_paths = ['./data/ace05/train.json',
-    #               './data/ace05/dev.json',
-    #               './data/ace05/test.json']
-    #
-    # for path, save_path in zip(paths, save_paths):
-    #     # convert_context_data(path, tokenizer, save_path)
-    #     convert_bio_passage_data(path, tokenizer, save_path)
-    # get_vec_dicts(directory='./data/ace05',
-    #               prex='ace05')
-    #
-    # tokenizer = BertTokenizer.from_pretrained('./bert-large-cased',
-    #                                           do_lower_case=False)
-    # add_special_token(special_token_list=['<ENT>', '</ENT>'],
-    #                   bert_path='./bert-large-cased')
-    #
-    # train_path = './data/original/kbp17/kbp17_train_context.json'
-    # dev_path = './data/original/kbp17/kbp17_dev_context.json'
-    # test_path = './data/original/kbp17/kbp17_test_context.json'
-    # paths = [train_path,
-    #          dev_path,
-    #          test_path]
-    # confirm_directory('./data/kbp17')
-    # save_paths = ['./data/kbp17/train.json',
-    #               './data/kbp17/dev.json',
-    #               './data/kbp17/test.json']
-    #
-    # for path, save_path in zip(paths, save_paths):
-    #     convert_context_data(path, tokenizer, save_path)
-    #     convert_bio_passage_data(path, tokenizer, save_path)
+    tokenizer = BertTokenizer.from_pretrained('./bert-large-cased',
+                                              do_lower_case=False)
+    add_special_token(special_token_list=['<ENT>', '</ENT>'],
+                      bert_path='./bert-large-cased')
+    train_path = './data/original/ace04/ace04_train_context.json'
+    dev_path = './data/original/ace04/ace04_dev_context.json'
+    test_path = './data/original/ace04/ace04_test_context.json'
+    paths = [train_path,
+             dev_path,
+             test_path]
+    confirm_directory('./data/ace04')
+    save_paths = ['./data/ace04/train.json',
+                  './data/ace04/dev.json',
+                  './data/ace04/test.json']
+    
+    for path, save_path in zip(paths, save_paths):
+        convert_context_data(path, tokenizer, save_path)
+    get_vec_dicts(directory='./data/ace04',
+                  prex='ace04')
+    
+    tokenizer = BertTokenizer.from_pretrained('./bert-large-cased',
+                                              do_lower_case=False)
+    add_special_token(special_token_list=['<ENT>', '</ENT>'],
+                      bert_path='./bert-large-cased')
+    
+    train_path = './data/original/ace05/ace05_train_context.json'
+    dev_path = './data/original/ace05/ace05_dev_context.json'
+    test_path = './data/original/ace05/ace05_test_context.json'
+    paths = [train_path,
+             dev_path,
+             test_path]
+    confirm_directory('./data/ace05')
+    save_paths = ['./data/ace05/train.json',
+                  './data/ace05/dev.json',
+                  './data/ace05/test.json']
+    
+    for path, save_path in zip(paths, save_paths):
+        # convert_context_data(path, tokenizer, save_path)
+        convert_bio_passage_data(path, tokenizer, save_path)
+    get_vec_dicts(directory='./data/ace05',
+                  prex='ace05')
+    
+    tokenizer = BertTokenizer.from_pretrained('./bert-large-cased',
+                                              do_lower_case=False)
+    add_special_token(special_token_list=['<ENT>', '</ENT>'],
+                      bert_path='./bert-large-cased')
+    
+    train_path = './data/original/kbp17/kbp17_train_context.json'
+    dev_path = './data/original/kbp17/kbp17_dev_context.json'
+    test_path = './data/original/kbp17/kbp17_test_context.json'
+    paths = [train_path,
+             dev_path,
+             test_path]
+    confirm_directory('./data/kbp17')
+    save_paths = ['./data/kbp17/train.json',
+                  './data/kbp17/dev.json',
+                  './data/kbp17/test.json']
+    
+    for path, save_path in zip(paths, save_paths):
+        convert_context_data(path, tokenizer, save_path)
+        convert_bio_passage_data(path, tokenizer, save_path)
     get_vec_dicts(directory='./data/kbp17',
                   prex='kbp17')
